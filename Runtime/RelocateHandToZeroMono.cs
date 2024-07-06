@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class RelocateHandToZeroMono : MonoBehaviour
 {
-
+    
     [Header("Source")]
     public Transform m_playerHead;
     public Transform m_playerLeftHand;
@@ -36,6 +36,7 @@ public class RelocateHandToZeroMono : MonoBehaviour
     {
 
         m_cartesianCenter = m_playerHead.position - new Vector3(0, m_handDownDistance, 0);
+
         Debug.DrawLine(m_cartesianCenter, m_cartesianCenter + Vector3.up, Color.green);
         m_handLeftStart = m_playerLeftHand.position;
         m_handRightStart = m_playerRightHand.position;
